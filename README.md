@@ -1,3 +1,7 @@
+# Me-react
+
+This project is done in React.js and it is done for the course DV1612 JavaScript-baserade webbramverk at BTH.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
