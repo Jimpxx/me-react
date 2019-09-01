@@ -18,13 +18,13 @@ class App extends Component {
                                 <Link to="/">Me</Link>
                             </li>
                             <li>
-                                <Link to="/reports/kmom01">Report</Link>
+                                <Link to="/reports/week/1">Report</Link>
                             </li>
                         </ul>
                     </div>
 
                     <Route exact path="/" component={Me} />
-                    <Route path="/reports/kmom01" component={Report} />
+                    <Route path="/reports/week/1" component={Report} />
 
                     <footer class="site-footer">
                         <p>Copyright &copy; 2018 Jimmy Andersson</p>
