@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+// import logo from './logo.svg';
+
+import Me from './Me';
+import Report from './Report';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <div className="nav">
+                        <ul>
+                            <li>
+                                <Link to="/">Me</Link>
+                            </li>
+                            <li>
+                                <Link to="/reports/kmom01">Report</Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <Route exact path="/" component={Me} />
+                    <Route path="/reports/kmom01" component={Report} />
+
+                    <footer class="site-footer">
+                        <p>Copyright &copy; 2018 Jimmy Andersson</p>
+                    </footer>
+                </div>
+            </Router>
+        );
+    }
 }
+
 
 export default App;
